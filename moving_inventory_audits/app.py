@@ -137,7 +137,7 @@ def build_report_text() -> str:
     lines.append("=" * 58)
     lines.append(f"  Date     : {date_str}")
     lines.append(f"  Auditor  : {auditor}")
-    lines.append(f"  Company  : Moving Company")
+    lines.append(f"  Company  : College HUNKS Hauling Junk & Moving")
     lines.append("=" * 58)
 
     grand_total = 0
