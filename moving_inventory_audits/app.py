@@ -86,6 +86,7 @@ def check_password():
             st.session_state["authenticated"] = False
 
     if not st.session_state["authenticated"]:
+        st.markdown("<div style='margin-top: 6rem;'></div>", unsafe_allow_html=True)
         st.text_input(
             "Enter Password to access the Inventory Audit",
             type="password",
@@ -99,7 +100,7 @@ if not check_password():
     st.stop()
 
 # ── Session state init ────────────────────────────────────────────────────────
-TRUCKS = ["Truck 1", "Truck 2", "Truck 3", "Truck 4"]
+TRUCKS = ["Old 26ft", "New 26ft", "20ft Ramp", "20ft Lift Gate"]
 
 if "inventory" not in st.session_state:
     st.session_state.inventory = {t: [] for t in TRUCKS}
@@ -296,7 +297,7 @@ for i, tab in enumerate(tabs):
 
             edited = st.data_editor(
                 df,
-                use_container_width=True,
+                width="stretch",
                 num_rows="dynamic",
                 key=f"editor_{truck}",
             )
