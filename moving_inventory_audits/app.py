@@ -5,7 +5,7 @@ import json
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Truck Inventory Tracker (TIT)",
+    page_title="GGC Truck Inventory Tracker (TIT)",
     page_icon="🚛",
     layout="wide",
 )
